@@ -1,0 +1,101 @@
+.main-items{
+    background-color: white;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:-1;
+    margin-top: .5rem;
+}
+.main-items .allItems{
+    padding: 0.5rem 0;
+     display: flex;
+     gap: 2.5rem;
+     align-items: center;
+     justify-content:flex-start;
+    
+     overflow-x: scroll;
+     margin: auto;
+     width: 100% ;
+     /* top: 125px;
+     left:250px; */
+}
+
+.allItems::-webkit-scrollbar{
+    display: none;
+}
+.main-items .inner-items{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+}
+.main-items .inner-items a img{
+    min-width:90px;
+    height: 100%;
+    margin-bottom: 0.2rem;
+}
+.main-items .inner-items a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  
+}
+.main-items .inner-items a{
+    color: black;
+    display: flex;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+   
+}
+.inner-downarrow {
+      display: flex;
+      flex-direction: row!important;
+      justify-self: center;
+      align-self: center;
+}
+.inner-downarrow .down-icon{
+    margin-top: 0.5rem;
+}
+.inner-items .inner-downarrow{
+    position: relative;
+}
+.inner-items .inner-downarrow:hover{
+    color: #006aaf;
+}
+
+.inner-downarrow:hover .down-icon{
+    transform: rotate(180deg);
+    transition: .2s linear all;
+}
+.inner-items:hover .showonhover ul{
+   display: flex;
+}
+
+ .showonhover ul{
+    padding: 2rem 2.9rem;
+    display:none;
+    gap: 0.8rem;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    position: absolute; 
+    z-index: 100;
+  
+} 
+.showonhover ul li{
+    list-style: none;
+}
+
+@media (max-width:750px)
+{
+      .inner-downarrow .down-icon{
+        display: none;
+      }
+      .allItems{
+        gap: 1rem;
+      }
+}
